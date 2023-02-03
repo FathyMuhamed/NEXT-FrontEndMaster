@@ -1,13 +1,13 @@
 import React from 'react';
 import { delay } from "@/lib/async";
-import { getUserNameFromCookies } from "@/lib/auth"
+import { getUserFromCookies } from "@/lib/auth"
 import { cookies } from "next/headers"
 import Card from './Card';
 import Button from './Button';
 
 const getData = async () => {
   await delay(5000);
-  const user = await getUserNameFromCookies(cookies());
+  const user = await getUserFromCookies(cookies());
   return user;
 
 }

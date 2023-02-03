@@ -35,7 +35,7 @@ export const validateJWT = async (jwt: any) => {
   return payload.payload as any;
 };
 
-export const getUserNameFromCookies = async (cookies: any) => {
+export const getUserFromCookies = async (cookies: any) => {
   const jwt = cookies.get(process.env.COOKIE_NAME);
   if (!jwt) return null;
 
