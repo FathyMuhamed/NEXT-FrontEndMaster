@@ -33,7 +33,7 @@ export default async function signin(
         })
       );
       res.status(201).json({ message: "Success" });
-      res.end();
+      res.json({});
     } else {
       res.status(401);
       res.json({ error: "Invalid login" });
@@ -41,5 +41,5 @@ export default async function signin(
   }
 
   res.status(402).json({ error: "Method not allowed" });
-  res.end();
+  res.json({});
 }

@@ -34,10 +34,8 @@ export default async function register(
         maxAge: 60 * 60 * 24 * 7,
       })
     );
-    res.status(201).json({ message: "Success" });
-    res.end();
+    return res.status(201).json({ message: "Success" });
   }
 
-  res.status(402).json({ error: "Method not allowed" });
-  res.end();
+  return res.status(402).json({ error: "Method not allowed" });
 }

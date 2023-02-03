@@ -51,7 +51,7 @@ const AuthForm = ({ mode }: {
   }, [formState.email,
   formState.password,
   formState.firstName,
-  formState.lastName,])
+  formState.lastName])
 
   const formContent = mode === AuthFormMode.Register ? registerContent : signinContent;
 
