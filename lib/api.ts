@@ -42,3 +42,12 @@ export const signIn = async (user: any) => {
     json: false,
   });
 };
+
+export const createNewProject = async (name: any) => {
+  return fetcher({
+    url: "/api/project",
+    method: "POST",
+    body: { name },
+    json: true,
+  });
+};

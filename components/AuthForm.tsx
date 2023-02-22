@@ -34,7 +34,9 @@ export enum AuthFormMode {
 const AuthForm = ({ mode }: {
   mode: string;
 }) => {
+
   const [formState, setFormState] = useState({ ...initial });
+
   const router = useRouter();
 
   const handleSubmit = useCallback(async (e: any) => {
